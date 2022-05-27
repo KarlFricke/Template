@@ -1,0 +1,22 @@
+@import "preset";
+
+$background: url('./assets/images/grid-bg.svg');
+$scale: 10;
+$size: #{$scale}rem;
+$speed: #{$scale*200}ms;
+
+body {
+    background-image: $background;
+    background-size: $size;
+    background-repeat: repeat 0 0;
+    animation: infiniteMove linear infinite 3000ms;
+}
+
+@keyframes infiniteMove {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: $size $size;
+    }
+}
